@@ -17,8 +17,15 @@ html {
     font-size: 24px;
 }
 
+.pageBody, .headline{
+    font-family: Muli, "Open Sans", Helvetica;
+    font-size: 120%;
+    font-weight: 300;
+}
+
+
 .pageTitle {
-    font-size: 42px;
+    font-size: 150%;
 }
 
 /*header styling begins */
@@ -33,9 +40,9 @@ header > a:hover {
     color: #555555;   
 }
 
-header > p {
-    font-size: 125%;
-    font-weight: 400; 
+.headline {
+    font-size: 150%;
+    font-weight: 300; 
 }
 
 body > header {
@@ -65,9 +72,9 @@ nav a {
 nav li {
     list-style: none;
     display: inline;
-    padding: 2%;
+    padding: 1%;
     margin: 4%;
-    font-size: 18px;
+    font-size: 150%;
     border-bottom: 1px solid #ffffff;
     transition: all 0.3s ease-in-out;
 }
@@ -77,6 +84,10 @@ nav li:hover{
     color: deepskyblue;
 }
 /*navigation styling ends*/
+
+.pageBody {
+    margin-top: 1%;
+}
 
 /*barchart Stylign*/
 .barChart rect {
@@ -182,4 +193,17 @@ a {
 
 #firstContainer:after {
     border-right: 5px dotted orangered;
+}
+
+.vertical-list-link-style {
+    text-decoration: none;
+    color:black;
+}
+
+.vertical-list-link-style:hover {
+    color: deepskyblue;
+}
+
+.me-desc {
+    margin-bottom:20px;
 }
