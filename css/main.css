@@ -67,6 +67,7 @@ nav {
 
 nav a {
     text-decoration: none;
+    color:steelblue;
 }
 
 nav li {
@@ -207,4 +208,17 @@ a {
 .me-desc {
     margin-bottom:20px;
     text-align: justify;
+}
+
+.footer-bar {
+    border-bottom: 2px solid deepskyblue;
+}
+
+.link {
+    text-decoration: none;
+    color: steelblue;
+}
+
+.link:hover {
+    color:deepskyblue;
 }
