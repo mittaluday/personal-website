@@ -24,28 +24,40 @@
         </script>
     </head>
     <body>
-        <header>
-            <a href="#"><h1 class="pageTitle">&#60;um&#47;&#62;</h1></a>
-            <p class="headline">Graduate Student at <strong>UC Irvine</strong> | Design sensitive <strong>full stack developer</strong></p>
-        </header>
-        <nav>
-            <ul>
-                <a href="index.html"><li>Me</li></a>
-                <a href="projects.html"><li>Projects</li></a>
-                <a href="courses.html"><li>Courses</li></a>
-                <a href="files/CV_UdayMittal_Web.pdf" target="_blank"><li>Resume</li></a>                
-                <a href="#"><li>Cycling</li></a>
-            </ul>
-        </nav>
+        <div class="container-fluid jumbotron">
+            <div class="row">
+                <div class="col-md-12" style="text-align:center">
+                    <header>
+                        <a href="#"><h1 class="pageTitle">&#60;um&#47;&#62;</h1></a>
+                        <p class="headline">Graduate Student at <strong>UC Irvine</strong> | Design sensitive <strong>full stack developer</strong></p>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" role="navigation">
+                    <nav>
+                        <ul class="nav">
+                            <a href="index.html"><li class="active">Me</li></a>
+                            <a href="projects.html"><li>Projects</li></a>
+                            <a href="courses.html"><li>Courses</li></a>
+                            <a href="files/CV_UdayMittal_Web.pdf" target="_blank"><li>Resume</li></a>                
+                            <a href="#"><li>Cycling</li></a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
         
-        <div class="charts">
+        <div class="charts pageBody">
             
             <header>
             <div class="container">
                  <div class="row">
                     <div class="col-md-6">
                         <h2>Cycling Logs</h2>
-                        <p class="text-muted">Analysis of my cycling data</p>
+                        <p class="text-muted">Analysis and a visualization of my cycling adventures</p>
                     </div>
                     <div class="col-md-3" id="firstContainer">
                         <div class="totalRideCount"></div>
@@ -71,7 +83,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p>The visualization represents my average cycling speed over time since October 2014.    </p>
+                    <p>The purpose of this visualization is to figure out a high vs low training periods and use it as a motivation to train better.</p>
                 </div>
             </div>
         </div>
@@ -79,10 +91,8 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10">
-                        <small lang="" class="text-muted">Uday Mittal</small>
-                    </div>
-                    <div class="col-md-2">
+                    
+                    <div class="col-md-4 col-md-offset-4">
                         <div class="button">
                             Reanimate
                         </div>
