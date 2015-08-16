@@ -72,14 +72,34 @@ var igrid = (function() {
     instagram = data;
     container = document.getElementById(params._container);
 
+      
+    var mq = window.matchMedia( "(min-width: 640px)" );
+    mq.addListener(widthChange);
+    widthChange(mq);
+      
     for(var i=0;i<params._total;i++) {
-      createImageBlock(i);
+      createImageBlock(i, mq);
     }
 
     if(params._clearfix) {
       addClearfix();
     }
   }
+    
+    function widthChange(mq){
+        if (mq.matches) {
+		// window width is at least 640px
+            $(".insta-block").each(function(){
+                this.style.width = 100/params._width - 2 + '%';
+            });
+        }
+        else {
+            // window width is less than 640px
+            $(".insta-block").each(function(){
+                this.style.width = 100/2 - 2 + '%';
+            });
+        }    
+    }
 
   /*
   **
@@ -88,12 +108,24 @@ var igrid = (function() {
   ** via parameters
   **
   */ 
-  function createImageBlock(i) {
+  function createImageBlock(i, mq) {
 
     // create image block
     var block = document.createElement('div');
     block.className='insta-block';
-    block.style.width=100/params._width+ - 2 + '%';
+      
+    //Media query to check mediaSize  
+    
+    if (mq.matches) {
+	   // window width is at least 640px
+        block.style.width=100/params._width+ - 2 + '%';
+    }
+    else {
+        // window width is less than 640px
+        //Put two images in one row
+        block.style.width=100/2 -2 + '%'
+    }
+   
 
     // add image 
     var image = document.createElement('img');
