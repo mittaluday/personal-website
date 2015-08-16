@@ -76,6 +76,7 @@ nav li {
     padding: 1%;
     margin: 4%;
     font-size: 150%;
+    font-weight: 300;
     border-bottom: 1px solid #ffffff;
     transition: all 0.3s ease-in-out;
 }
@@ -124,7 +125,7 @@ nav li:hover{
     }
 
 circle {
-    fill: orangered;
+    fill: purple;
 }
 
 circle:hover {
@@ -167,7 +168,9 @@ circle:hover {
 
 .button {
     padding: 10px;
-    background-color: #ff8f66;
+   /* background-color: #ff8f66; */
+    color: white;
+    background-color: deepskyblue;
     text-align: center;
 }
 
@@ -184,16 +187,9 @@ a {
     text-decoration: none !important;
 }
 
-.totalRideCount, .totalDistance {
-    text-align: right;
-}
 
 .summaryDescriptionContainer {
     color:darkgray;
-}
-
-#firstContainer:after {
-    border-right: 5px dotted orangered;
 }
 
 .vertical-list-link-style {
@@ -206,12 +202,12 @@ a {
 }
 
 .me-desc {
-    margin-bottom:20px;
     text-align: justify;
 }
 
 .footer-bar {
-    border-bottom: 2px solid deepskyblue;
+    margin-bottom:4%;
+    border-bottom: 1px solid deepskyblue;
 }
 
 .link {
@@ -267,4 +263,18 @@ a {
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.section-header {    
+    text-align:center;
+    margin-bottom:2%;
+}
+
+.insta-block {
+    margin: 1% !important;
+}
+
+#nav-row {
+    padding-bottom: 2%;
+    border-bottom: 1px dotted lightskyblue;   
 }
