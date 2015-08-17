@@ -8,7 +8,7 @@ var igrid = (function() {
   var params; // user config
   var instagram; // instagram data
   var container; // instagram container
-  
+    
   /*
   **
   ** Initialize the igrid library
@@ -32,9 +32,44 @@ var igrid = (function() {
       '_likes': config.likes !== undefined ? config.likes : false,
       '_likesHover': config.likesHover !== undefined ? config.likesHover : false,
       '_caption': config.caption !== undefined ? config.caption : true,
-      '_clearfix': config.clearfix !== undefined ? config.clearfix : false
+      '_clearfix': config.clearfix !== undefined ? config.clearfix : false,
+      '_isMediaLarge': mq.matches
     };
     getInsta();
+  }
+      
+  /*
+  ** 
+  ** Handler to respond to media size
+  ** changes. Switches the image layout
+  ** between a vertical stack and a horizontal stack
+  **
+  */
+  function widthChange(mq){
+    $(".insta-block").each(function(){
+      this.style.width = getImageWidth(mq.matches);
+    });
+  }
+    
+  // media query to support a responsive image layout 
+  var mq = window.matchMedia( "(min-width: 640px)" );
+  mq.addListener(widthChange);
+  widthChange(mq);
+        
+    
+  /*
+  ** 
+  ** Return image size as a percentage of 
+  ** screen size
+  **
+  */
+  function getImageWidth(isLargeMedia){
+    if(isLargeMedia){
+      return 100/params._width - 2 + '%';
+    }
+    else {
+      return 100/2 - 2 + '%';
+    }
   }
 
   function alertMessage(message) {
@@ -71,35 +106,15 @@ var igrid = (function() {
   function initGrid(data) {
     instagram = data;
     container = document.getElementById(params._container);
-
-      
-    var mq = window.matchMedia( "(min-width: 640px)" );
-    mq.addListener(widthChange);
-    widthChange(mq);
-      
+    
     for(var i=0;i<params._total;i++) {
-      createImageBlock(i, mq);
+      createImageBlock(i);
     }
 
     if(params._clearfix) {
       addClearfix();
     }
   }
-    
-    function widthChange(mq){
-        if (mq.matches) {
-		// window width is at least 640px
-            $(".insta-block").each(function(){
-                this.style.width = 100/params._width - 2 + '%';
-            });
-        }
-        else {
-            // window width is less than 640px
-            $(".insta-block").each(function(){
-                this.style.width = 100/2 - 2 + '%';
-            });
-        }    
-    }
 
   /*
   **
@@ -108,24 +123,12 @@ var igrid = (function() {
   ** via parameters
   **
   */ 
-  function createImageBlock(i, mq) {
+  function createImageBlock(i) {
 
     // create image block
     var block = document.createElement('div');
-    block.className='insta-block';
-      
-    //Media query to check mediaSize  
-    
-    if (mq.matches) {
-	   // window width is at least 640px
-        block.style.width=100/params._width+ - 2 + '%';
-    }
-    else {
-        // window width is less than 640px
-        //Put two images in one row
-        block.style.width=100/2 -2 + '%'
-    }
-   
+    block.className='insta-block';      
+    block.style.width = getImageWidth(params._isMediaLarge);
 
     // add image 
     var image = document.createElement('img');
