@@ -3,7 +3,7 @@ var response;
 
 /* ajax call to strava API to retrieve and massage cycling data */
 $.ajax({
-    url: "",
+    url: "https://www.strava.com/api/v3/athlete/activities?access_token=c379ef8e4211fbe073b1adab4dbb3997fc0e69ac&per_page=150",
     dataType: 'jsonp',
     success: function(data){
         data.forEach(function(datum){
@@ -19,7 +19,7 @@ $.ajax({
 
 
 $.ajax({
-    url: "",
+    url: "https://www.strava.com/api/v3/athletes/6777185/stats?access_token=c379ef8e4211fbe073b1adab4dbb3997fc0e69ac",
     dataType: 'jsonp',
     success: function(data){
         var summaryObject = new Object();
@@ -45,7 +45,7 @@ function draw(data){
     /*chart dimensions*/
     var margin = {top:20, right: 30, bottom: 30, left:40},
         width = $("#vis").width() - margin.left - margin.right, 
-        height = 300 - margin.top - margin.bottom;
+        height = 350 - margin.top - margin.bottom;
     
     /*grouping data by the date*/
     var aggregatedData = d3.nest()
@@ -78,7 +78,7 @@ function draw(data){
     //radius scale
     var radius = d3.scale.linear();
         radius.domain([0, d3.max(aggregatedData, function(d){return d.distance})]);
-        radius.range([1,25]);
+        radius.range([1,30]);
 
     
     /*Defining axes*/

@@ -13,14 +13,16 @@ p, a {
 
 /* global defaults */
 html {
-    font-family: Muli, "Open Sans", Helvetica;
+    font-family: Merriweather;
     font-size: 24px;
+    
 }
 
 .pageBody, .headline{
-    font-family: Muli, "Open Sans", Helvetica;
-    font-size: 120%;
-    font-weight: 300;
+    font-family: Merriweather;
+    font-size: 110%;
+    line-height:160%;
+    font-weight: 200;
 }
 
 
@@ -33,11 +35,11 @@ header > a {
     font-size: 400%;
     font-weight: 600;
     text-decoration: none;
-    color: black;
+    color: #3AD694;
 }
 
 header > a:hover {
-    color: #555555;   
+    color: #3AD694;   
 }
 
 .headline {
@@ -67,7 +69,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color:steelblue;
+    color:#3AD694;
 }
 
 nav li {
@@ -82,8 +84,8 @@ nav li {
 }
 
 nav li:hover{
-    border-bottom-color: deepskyblue;
-    color: deepskyblue;
+    border-bottom-color: #3AD694;
+    color: #3AD694;
 }
 /*navigation styling ends*/
 
@@ -93,7 +95,7 @@ nav li:hover{
 
 /*barchart Stylign*/
 .barChart rect {
-    fill: steelblue;
+    fill: #3AD694;
 }
 
 .barChart {
@@ -103,16 +105,18 @@ nav li:hover{
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: white;
+  opacity: 0.5;
   shape-rendering: crispEdges;
 }
 
 .x.axis text, .y.axis text {
   font: 10px sans-serif;
-  color: black;
+  fill: mintcream; 
+  opacity: 0.8;
 }
 
-.x.axis .domain{
+.x.axis .domain, .y.axis .domain{
         stroke:#aaa;
     }
 
@@ -125,11 +129,11 @@ nav li:hover{
     }
 
 circle {
-    fill: purple;
+    fill: #3AD694;
 }
 
 circle:hover {
-    fill: steelblue;
+    fill: #3AD694;
 }
     
 .charts {
@@ -170,7 +174,7 @@ circle:hover {
     padding: 10px;
    /* background-color: #ff8f66; */
     color: white;
-    background-color: deepskyblue;
+    background-color: #3AD694;
     text-align: center;
 }
 
@@ -198,7 +202,7 @@ a {
 }
 
 .vertical-list-link-style:hover {
-    color: deepskyblue;
+    color: #3AD694;
 }
 
 .me-desc {
@@ -207,16 +211,16 @@ a {
 
 .footer-bar {
     margin-bottom:4%;
-    border-bottom: 1px solid deepskyblue;
+    border-bottom: 1px solid #3AD694;
 }
 
 .link {
     text-decoration: none;
-    color: steelblue;
+    color: #3AD694;
 }
 
 .link:hover {
-    color:deepskyblue;
+    color:#3AD694;
 }
 
 .project-desc {
@@ -274,7 +278,7 @@ a {
     margin: 1% !important;
 }
 
-#nav-row {
+/*#nav-row {
     padding-bottom: 2%;
-    border-bottom: 1px dotted lightskyblue;   
-}
+    border-bottom: 1px #3AD694;   
+} */
