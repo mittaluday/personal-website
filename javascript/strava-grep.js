@@ -42,10 +42,12 @@ function drawSummary(data){
 //function called to draw the char after the data is received by the strava api
 function draw(data){
     
+    var mediaHeight = $(window).height();
+    console.log(mediaHeight);
     /*chart dimensions*/
     var margin = {top:20, right: 30, bottom: 30, left:40},
         width = $("#vis").width() - margin.left - margin.right, 
-        height = 350 - margin.top - margin.bottom;
+        height = mediaHeight/2 - margin.top - margin.bottom;
     
     /*grouping data by the date*/
     var aggregatedData = d3.nest()
