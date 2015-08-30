@@ -13,13 +13,13 @@ p, a {
 
 /* global defaults */
 html {
-    font-family: Merriweather;
+    font-family: "Open Sans";
     font-size: 24px;
     
 }
 
 .pageBody, .headline{
-    font-family: Merriweather;
+    font-family: "Open Sans";
     font-size: 110%;
     line-height:160%;
     font-weight: 200;
