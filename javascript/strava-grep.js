@@ -3,7 +3,7 @@ var response;
 
 /* ajax call to strava API to retrieve and massage cycling data */
 $.ajax({
-    url: "",
+    url: "https://www.strava.com/api/v3/athlete/activities?access_token=c379ef8e4211fbe073b1adab4dbb3997fc0e69ac&per_page=150",
     dataType: 'jsonp',
     success: function(data){
         data.forEach(function(datum){
@@ -19,7 +19,7 @@ $.ajax({
 
 
 $.ajax({
-    url: "",
+    url: "https://www.strava.com/api/v3/athletes/6777185/stats?access_token=c379ef8e4211fbe073b1adab4dbb3997fc0e69ac",
     dataType: 'jsonp',
     success: function(data){
         var summaryObject = new Object();
@@ -32,20 +32,22 @@ $.ajax({
 function drawSummary(data){
     
     d3.select(".totalRideCount").append("h2").attr("class", "summaryValueContainer").text(data.totalRideCount);
-    d3.select(".totalRideCount").append("p").attr("class", "summaryDescriptionContainer").text("All Time Ride Count");
+    d3.select(".totalRideCount").append("p").attr("class", "summaryDescriptionContainer").text("Ride Count");
     
     d3.select(".totalDistance").append("h2").attr("class", "summaryValueContainer").text(data.totalDistance/1000);
-    d3.select(".totalDistance").append("p").attr("class", "summaryDescriptionContainer").text("All Time Distance in Kilometers");
+    d3.select(".totalDistance").append("p").attr("class", "summaryDescriptionContainer").text("Distance in KMs");
 }
 
 
 //function called to draw the char after the data is received by the strava api
 function draw(data){
     
+    var mediaHeight = $(window).height();
+    console.log(mediaHeight);
     /*chart dimensions*/
     var margin = {top:20, right: 30, bottom: 30, left:40},
         width = $("#vis").width() - margin.left - margin.right, 
-        height = 300 - margin.top - margin.bottom;
+        height = mediaHeight/2 - margin.top - margin.bottom;
     
     /*grouping data by the date*/
     var aggregatedData = d3.nest()
@@ -75,10 +77,12 @@ function draw(data){
         y.domain([0, d3.max(aggregatedData, function(d){return d.averageSpeed})+ 10]);
         y.range([height, 0]);
     
+    var scaledRadius = 30/700 * mediaHeight;
+    
     //radius scale
     var radius = d3.scale.linear();
         radius.domain([0, d3.max(aggregatedData, function(d){return d.distance})]);
-        radius.range([1,25]);
+        radius.range([1,scaledRadius]);
 
     
     /*Defining axes*/
@@ -86,7 +90,7 @@ function draw(data){
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom")
-        .ticks(d3.time.month, 1);
+        .ticks(d3.time.month, 3);
     
     //y axis
     var yAxis = d3.svg.axis()
@@ -190,7 +194,7 @@ function draw(data){
         var monthInterval = setInterval(function(){
 
             //traverse to the end of this month
-            dataFilterDate.setMonth(dataFilterDate.getMonth() + 1);
+            dataFilterDate.setMonth(dataFilterDate.getMonth() + 3);
             dataFilterDate.setDate(1);
             updateChart(dataFilterDate);
 
