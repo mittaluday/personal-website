@@ -91,7 +91,7 @@ nav li:hover{
 
 .pageBody {
     margin-top: 1%;
-    margin-bottom:25vh;
+/*    margin-bottom:25vh;*/
 }
 
 /*barchart Stylign*/
@@ -282,8 +282,10 @@ a {
 .footer {
   background-color: #eee;
   padding: 9vh;
-  position:fixed;
+/*
+  position:absolute;
   bottom:0;
+*/
   width:100%;
   color: #2D2C29;
   text-align: center;
