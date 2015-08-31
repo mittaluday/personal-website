@@ -91,6 +91,7 @@ nav li:hover{
 
 .pageBody {
     margin-top: 1%;
+    margin-bottom:25vh;
 }
 
 /*barchart Stylign*/
@@ -276,6 +277,23 @@ a {
 
 .insta-block {
     margin: 1% !important;
+}
+
+.footer {
+  background-color: #eee;
+  padding: 9vh;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  color: #2D2C29;
+  text-align: center;
+}
+
+.footer a{
+    color: black;
+    display: inline-block;
+    margin: 0 45px;
+    background-repeat: no-repeat;
 }
 
 /*#nav-row {

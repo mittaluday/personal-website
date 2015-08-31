@@ -32,10 +32,10 @@ $.ajax({
 function drawSummary(data){
     
     d3.select(".totalRideCount").append("h2").attr("class", "summaryValueContainer").text(data.totalRideCount);
-    d3.select(".totalRideCount").append("p").attr("class", "summaryDescriptionContainer").text("All Time Ride Count");
+    d3.select(".totalRideCount").append("p").attr("class", "summaryDescriptionContainer").text("Ride Count");
     
     d3.select(".totalDistance").append("h2").attr("class", "summaryValueContainer").text(data.totalDistance/1000);
-    d3.select(".totalDistance").append("p").attr("class", "summaryDescriptionContainer").text("All Time Distance in Kilometers");
+    d3.select(".totalDistance").append("p").attr("class", "summaryDescriptionContainer").text("Distance in KMs");
 }
 
 
@@ -77,10 +77,12 @@ function draw(data){
         y.domain([0, d3.max(aggregatedData, function(d){return d.averageSpeed})+ 10]);
         y.range([height, 0]);
     
+    var scaledRadius = 30/700 * mediaHeight;
+    
     //radius scale
     var radius = d3.scale.linear();
         radius.domain([0, d3.max(aggregatedData, function(d){return d.distance})]);
-        radius.range([1,30]);
+        radius.range([1,scaledRadius]);
 
     
     /*Defining axes*/
@@ -88,7 +90,7 @@ function draw(data){
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom")
-        .ticks(d3.time.month, 1);
+        .ticks(d3.time.month, 3);
     
     //y axis
     var yAxis = d3.svg.axis()
@@ -192,7 +194,7 @@ function draw(data){
         var monthInterval = setInterval(function(){
 
             //traverse to the end of this month
-            dataFilterDate.setMonth(dataFilterDate.getMonth() + 1);
+            dataFilterDate.setMonth(dataFilterDate.getMonth() + 3);
             dataFilterDate.setDate(1);
             updateChart(dataFilterDate);
 

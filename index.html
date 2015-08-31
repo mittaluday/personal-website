@@ -25,7 +25,6 @@
         <link href="css/instagram-grid.css" rel="stylesheet">
         <script type="text/javascript" src="javascript/instagram-grid.js"></script>
         <script type="text/javascript" src="javascript/load-insta.js"></script>
-
     </head>
     <body>
         <div class="container-fluid jumbotron">
@@ -47,7 +46,7 @@
                             <a href="projects.html"><li>Projects</li></a>
                             <a href="courses.html"><li>Courses</li></a>
                             <a href="files/CV_UdayMittal_Web.pdf" target="_blank"><li>Resume</li></a>                
-                            <a href="cycling.html"><li>Cycling</li></a>
+                            <a href="cycling-landing.html"><li>Cycling</li></a>
                         </ul>
                     </nav>
                 </div>
@@ -77,16 +76,14 @@
                     <div class="col-md-12" id="insta-feed">
                     </div>
                 </div>
-                <!--<div class="row">
-                    <div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 footer-bar">
-                        
-                    </div>
-                </div>-->
-                
             </main>
         </div>
         
+        <div class="footer-container"></div>
         
+        <script>
+            $(".footer-container").load("footer.html"); 
+        </script>
     </body>
 </html>
 
