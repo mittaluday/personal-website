@@ -6,12 +6,10 @@
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Roboto:400,300,500' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1 ">
         <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
-        <script src="javascript/d3min.js"></script>
-        <script src="javascript/strava-grep.js"></script>
         <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,88 +19,71 @@
 
           ga('create', 'UA-66308729-1', 'auto');
           ga('send', 'pageview');
-
+            
         </script>
+        
+        <link href="css/instagram-grid.css" rel="stylesheet">
+        <script type="text/javascript" src="javascript/instagram-grid.js"></script>
+        <script type="text/javascript" src="javascript/load-insta.js"></script>
     </head>
     <body>
         <div class="container-fluid jumbotron">
             <div class="row">
                 <div class="col-md-12" style="text-align:center">
                     <header>
-                        <a href="index.html"><h1 class="pageTitle">&#60;um&#47;&#62;</h1></a>
-                        <p class="headline">Graduate Student at <strong>UC Irvine</strong> | Design sensitive <strong>full stack developer</strong></p>
+                        <a href="#"><h1 class="pageTitle">&#60;um&#47;&#62;</h1></a>
+                        <p class="headline">Graduate Student at <strong>UC Irvine</strong> | Full stack developer <strong>with design sensitivity</strong></p>
                     </header>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row" id="nav-row">
                 <div class="col-md-12" role="navigation">
                     <nav>
                         <ul class="nav">
-                            <a href="index.html"><li class="active">Me</li></a>
+                            <a href="#"><li class="active">About</li></a>
                             <a href="projects.html"><li>Projects</li></a>
                             <a href="courses.html"><li>Courses</li></a>
                             <a href="files/CV_UdayMittal_Web.pdf" target="_blank"><li>Resume</li></a>                
-                            <a href="#"><li>Cycling</li></a>
+                            <a href="index.html"><li>Cycling</li></a>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
-        
-        <div class="charts pageBody">
-            
-            <header>
-            <div class="container">
-                 <div class="row">
-                    <div class="col-md-6 col-xs-12">
-                        <h2>Cycling Logs</h2>
-                        <p class="text-muted">Analysis and a visualization of my cycling adventures</p>
-                    </div>
-                    <div class="col-md-3  col-xs-12">
-                        <div class="totalRideCount"></div>
-                    </div>
-                    <div class="col-md-3 col-xs-12">
-                        <div class="totalDistance"></div>
+        <div class="container pageBody">
+            <main>
+                <div class="row" style="margin:4%">
+                    <div class="col-md-8 col-md-offset-2 me-desc pull-left">
+                        <p>I am Uday, currently pursuing masters in Computer Science at UCI. Applications of <strong>Machine Learning</strong> and <strong>Computer Vision</strong> excite me.
+                        </p>
+                        <p> <br/>Prior to joining UCI, I was working with <a href="http://www.khoslalabs.com" target="_blank" class="link"><strong>Khosla Labs</strong></a>, a startup incubator in India, where I developed platform tools for data analytics. Over the last two years, I've worked with startups as a full stack developer in the Payments and Mobility domains. 
+                        </p>
                     </div>
                 </div>
-            </div>
-
-        </header>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="vis" class="viewbox">
-                        <svg class="barChart"></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>The purpose of this visualization is to figure out a high vs low training periods and use it as a motivation to train better.</p>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <footer>
-            <div class="container">
                 <div class="row">
-                    
-                    <div class="col-md-4 col-md-offset-4">
-                        <div class="button">
-                            Reanimate
-                        </div>
+                    <div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 footer-bar">
+                        
                     </div>
                 </div>
-                
-            </div>
-
-        </footer>
+                <div class="row">
+                    <div class="col-md-12" >
+                        <h3 class="section-header">A look into my life</h3>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom:4%">
+                    <div class="col-md-12" id="insta-feed">
+                    </div>
+                </div>
+            </main>
         </div>
+        
+        <div class="footer-container"></div>
+        
+        <script>
+            $(".footer-container").load("footer.html"); 
+        </script>
     </body>
 </html>
+
