@@ -39,7 +39,7 @@ header > a {
 }
 
 header > a:hover {
-    color: #3AD694;   
+    color: mintcream;   
 }
 
 .headline {
@@ -61,15 +61,19 @@ header strong {
 
 /*navigation styling begins*/
 nav {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
-    
 }
 
+/*
+* navigation link decoration
+*/
 nav a {
     text-decoration: none;
     color:#3AD694;
+    font-family:merriweather; 
+    font-weight:300;
 }
 
 nav li {
@@ -172,7 +176,7 @@ circle:hover {
 }
 
 .button {
-    padding: 10px;
+    padding: 5px;
    /* background-color: #ff8f66; */
     color: white;
     background-color: #3AD694;
@@ -211,7 +215,8 @@ a {
 }
 
 .footer-bar {
-    margin-bottom:4%;
+    margin-bottom:2%;
+    margin-top:2%;
     border-bottom: 1px solid #3AD694;
 }
 
@@ -270,8 +275,15 @@ a {
     to   { opacity: 1; }
 }
 
-.section-header {    
+/*
+* section headings are serif
+* and coffee brown in color 
+*/
+#section-header {    
     text-align:center;
+    font-family:merriweather; 
+    font-weight:400; 
+    color:2d2c29 !important;
     margin-bottom:2%;
 }
 

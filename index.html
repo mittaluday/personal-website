@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/main.css">
         <link href="css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/landing-styles.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1 ">
@@ -24,9 +25,9 @@
     <body style="background-color:#2d2c29;">        
         <div class="charts pageBody" style="position:absolute; margin:auto; top:0; bottom:0; right:0; left:0; height:90%">
             <div class="container">
-                <div class="row" style="text-align:center;font-family:'Open Sans';font-weight:bold;">
+                <div class="row">
                         <header>
-                            <a href="about.html"><h1 class="pageTitle">&#60;um&#47;&#62;</h1></a>
+                            <a title="Click to Enter" href="about.html"><h1 class="landing-title" style="font-size:110%;text-align:center;font-family:'Open Sans';font-weight:700;">&#60;um&#47;&#62;</h1></a>
                         </header>
                     </div>
                 <div class="row">
@@ -53,7 +54,17 @@
                     </div>
                     
                 </div>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-5 enter-button" style="  ">
+                        <p>Enter</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <script>
+         $('.enter-button').click(function(){
+            window.location.href = "about.html";
+         })
+        </script>
     </body>
 </html>
