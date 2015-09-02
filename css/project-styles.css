@@ -7,3 +7,12 @@
     padding: 3%;
     display:none;
 }
+
+.project-item {
+    color: #2d2c29;
+}
+
+.project-item:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
