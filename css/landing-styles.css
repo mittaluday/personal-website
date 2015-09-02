@@ -1,19 +1,13 @@
 .enter-button {
    /* background-color: #ff8f66; */
-    color: white;
-    background-color: #3AD694;
     text-align: center;
-    font-size:120%; 
-    font-weight:400; 
-    background-color:#3AD694; 
-    color:#2d2c29;
+    color:#3AD694;
 }
 
 .enter-button:hover {
-    background-color: mintcream;
-    color: #2d2c29;
+    color: mintcream;
 }
 
 .enter-button:active{
-    background-color: darkcyan;
+    color: darkcyan;
 }

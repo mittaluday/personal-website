@@ -1195,7 +1195,7 @@ h6,
   line-height: 1.1;
   color: inherit;
 }
-h3 {
+h3, h4 {
  color: #2d2c29;
 }
 h1 small,
