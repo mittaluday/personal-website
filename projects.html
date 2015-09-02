@@ -56,54 +56,66 @@
                 
                 
                 <div class="row">
+                    
                     <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-                       
-                        <h3>Professional Projects</h3>
-                        <ul class="list-group">
+                        <ul class="nav nav-tabs nav-justified">
+                            <li role="presentation" class="active" id="professional-projects-link"><a href="#"><h4>Professional Projects</h4></a></li>
+                            <li role="presentation" id="academic-projects-link"><a href="#"><h4>Academic Projects</h4></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" id="professional-projects">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+
+                    <ul class="list-group">
                             <a class="link list-group-item project-item" href="sales-prediction.html">
+                                <span class="badge">Mar15 - Jul15</span>
                                 <h4 class="list-group-item-heading">Sales Conversion Prediction</h4>
-                                <span class="badge">2 Months</span>
                                 <p class="list-group-item-text"> <i><small>- Android, Java, Python</small></i></p>
                                 <p class="list-group-item-text"> <i><small>- At Novopay</i></small></p>
                                 
                             </a>
                             <a class="link list-group-item project-item" href="business-dashboards.html">
+                                <span class="badge">Jun14 - Jul15</span>
                                 <h4 class="list-group-item-heading">Business/Ops Performance Dashboards</h4>
-                                <span class="badge">12 Months</span>
                                 <p class="list-group-item-text"><i><small>- Elasticsearch, Kibana, Javascript, Java</small></i></p>
                                 <p class="list-group-item-text"><i><small>- At Khoslalabs & Novopay</small></i></p>
 
                             </a>
                             <a class="link list-group-item project-item" href="#relay-server">
+                                <span class="badge">Aug13 - Mar13</span>
                                 <h4 class="list-group-item-heading">Data Relay Server for Media Streaming on Mobile Devices</h4>
-                                <span class="badge">6 Months</span>
                                 <p class="list-group-item-text"><i><small>- Python, AWS, C, TCP</small></i></p>
                                 <p class="list-group-item-text"><i><small>- At Mobitrix</small></i></p>
                             </a>
                         </ul>
-                        <h3>Academic Projects</h3>
-                        <ul class="list-group">
-                            <a class="link list-group-item project-item" href="#cervical-cancer">
+                    </div>
+                </div>
+                <div class="row" id="academic-projects" style="display:none;">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+
+                    <ul class="list-group">
+<a class="link list-group-item project-item" href="#cervical-cancer">
+                                <span class="badge">Sep12 - Dec13</span>
                                 <h4 class="list-group-item-heading">Automation of Cervical Cancer Detection</h4>
-                                <span class="badge">8 Months</span>
                                 <p class="list-group-item-text"><i><small>- Image Processing, Pattern Recognition, Matlab </small></i></p>
                                 <p class="list-group-item-text"><i><small>- IIT Mandi & GTB Hospital, Delhi</small></i></p>
                             </a>
                             <a class="link list-group-item project-item" href="#scm-hill">
+                                <span class="badge">Aug12 - Feb13</span>
                                 <h4 class="list-group-item-heading">Supply Chain Management Optimization in Hilly Regions</h4>
-                                <span class="badge">8 Months</span>
                                 <p class="list-group-item-text"><i><small>- Machine Learning, ACO</small></i></p>
                                 <p class="list-group-item-text"><i><small>- IIT Mandi & IIM Bangalore</small></i></p>
                             </a>
                             <a class="link list-group-item project-item" href="#energy">
+                                <span class="badge">Aug12 - Jul13</span>
                                 <h4 class="list-group-item-heading">Optimizing Energy Generation and Allocation for Himachal Pradesh</h4>
-                                <span class="badge">12 Months</span>
                                 <p class="list-group-item-text"><i><small>- Time Series Analysis, Machine Learning, Data Analytics</small></i></p>
                                 <p class="list-group-item-text"><i><small>- IIT Mandi</small></i></p>
                             </a>
                         </ul>
                     </div>
-                </div>  
+                </div>
             </main>
             <div class="row">
                     <div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 footer-bar">
@@ -117,6 +129,18 @@
         
         <script>
             $(".footer-container").load("footer.html"); 
+            $("#academic-projects-link").click(function(){
+                $("#professional-projects").css("display", "none");
+                $("#academic-projects").css("display", "block");
+                $("#academic-projects-link").attr("class", "active");
+                $("#professional-projects-link").attr("class", "");
+            });
+            $("#professional-projects-link").click(function(){
+                $("#academic-projects").css("display", "none");
+                $("#professional-projects").css("display", "block");
+                $("#professional-projects-link").attr("class", "active");
+                $("#academic-projects-link").attr("class", "");
+            });
         </script>
     </body>
 </html>
