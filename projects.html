@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400,700' rel='stylesheet' type='text/css'>
         <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="project-styles.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Roboto:400,300,500' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'>
@@ -68,21 +69,44 @@
                     <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
 
                     <ul class="list-group">
-                            <a class="link list-group-item project-item" href="sales-prediction.html">
+                            <a class="link list-group-item project-item" href="#" data-link="sales-prediction-description">
                                 <span class="badge">Mar15 - Jul15</span>
                                 <h4 class="list-group-item-heading">Sales Conversion Prediction</h4>
                                 <p class="list-group-item-text"> <i><small>- Android, Java, Python</small></i></p>
-                                <p class="list-group-item-text"> <i><small>- At Novopay</i></small></p>
-                                
+                                <p class="list-group-item-text"> <i><small>- At Novopay</i></small></p>                                
                             </a>
-                            <a class="link list-group-item project-item" href="business-dashboards.html">
+                            <div class="project-description" id="sales-prediction-description">
+                                <div class="row">
+                                    <div class="col-md-8 me-desc" >
+                                        <p>Novopay is a business in the payments domain, that aims to achieve financial inclusion in India by empowering retailers(kirana shops) to service as banks by letting people do transactions using their Aadhaar identity.</p>
+                                        <p><br/>The Sales Conversion Prediction project was started with an aim to empower the sales team in making faster conversions by increasing their focus on promising retailers. This was achieved through collecting vast amounts of data about the retailer and his surroundings. The data was used to build a real-time conversion prediction model</p>
+                                        <br/>
+                                        <h4>Things that I worked on?</h4>
+                                        <ul>
+                                            <li>
+                                        <p> <strong>Data Collection & Feature Set Design: </strong>Data collection was a humongous task and needed an intelligent solution. I quickly learned Android and built a survey app that was embedded in the Novopay's retailer onboarding app. The survey collected 20 data points for each retailer. The survey was easily filled up in less than 2 minutes.</p>
+                                            </li>
+                                            <li><strong>Exploratory Data Analysis & Preliminary Prediction Model: </strong> With the data that was collected, I conducted an exploration of the data to find out features that correlated with conversion. These features were a mixed group of categorical as well as continuous types. I used them to build a prediction model which was further taken up by the team to make realtime predictions.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <h3>Tech Stack</h3>
+                                        <div class="col-md-12">
+                                            <p><strong>App: </strong> Android, Java, Protobuf, Mysql, Hibernate.</p>
+                                            <p><strong>EDA & Model:</strong> Python(scikit-learn and pandas), PMML.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="link list-group-item project-item" href="#">
                                 <span class="badge">Jun14 - Jul15</span>
                                 <h4 class="list-group-item-heading">Business/Ops Performance Dashboards</h4>
                                 <p class="list-group-item-text"><i><small>- Elasticsearch, Kibana, Javascript, Java</small></i></p>
                                 <p class="list-group-item-text"><i><small>- At Khoslalabs & Novopay</small></i></p>
 
                             </a>
-                            <a class="link list-group-item project-item" href="#relay-server">
+                            <a class="link list-group-item project-item" href="#">
                                 <span class="badge">Aug13 - Mar13</span>
                                 <h4 class="list-group-item-heading">Data Relay Server for Media Streaming on Mobile Devices</h4>
                                 <p class="list-group-item-text"><i><small>- Python, AWS, C, TCP</small></i></p>
@@ -95,19 +119,19 @@
                     <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
 
                     <ul class="list-group">
-<a class="link list-group-item project-item" href="#cervical-cancer">
+                            <a class="link list-group-item project-item" href="#">
                                 <span class="badge">Sep12 - Dec13</span>
                                 <h4 class="list-group-item-heading">Automation of Cervical Cancer Detection</h4>
                                 <p class="list-group-item-text"><i><small>- Image Processing, Pattern Recognition, Matlab </small></i></p>
                                 <p class="list-group-item-text"><i><small>- IIT Mandi & GTB Hospital, Delhi</small></i></p>
                             </a>
-                            <a class="link list-group-item project-item" href="#scm-hill">
+                            <a class="link list-group-item project-item" href="#">
                                 <span class="badge">Aug12 - Feb13</span>
                                 <h4 class="list-group-item-heading">Supply Chain Management Optimization in Hilly Regions</h4>
                                 <p class="list-group-item-text"><i><small>- Machine Learning, ACO</small></i></p>
                                 <p class="list-group-item-text"><i><small>- IIT Mandi & IIM Bangalore</small></i></p>
                             </a>
-                            <a class="link list-group-item project-item" href="#energy">
+                            <a class="link list-group-item project-item" href="#">
                                 <span class="badge">Aug12 - Jul13</span>
                                 <h4 class="list-group-item-heading">Optimizing Energy Generation and Allocation for Himachal Pradesh</h4>
                                 <p class="list-group-item-text"><i><small>- Time Series Analysis, Machine Learning, Data Analytics</small></i></p>
@@ -122,7 +146,6 @@
                         
                     </div>
             </div>
-                
         </div>
         
         <div class="footer-container"></div>
@@ -140,6 +163,12 @@
                 $("#professional-projects").css("display", "block");
                 $("#professional-projects-link").attr("class", "active");
                 $("#academic-projects-link").attr("class", "");
+            });
+            
+            $(".project-item").click(function(){
+                var id = $(this).attr("data-link");
+                $("#" + id).css("display") == "block" ? $("#" + id).slideUp(500): $("#" + id).slideDown(500);
+                
             });
         </script>
     </body>
