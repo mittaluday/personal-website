@@ -99,13 +99,41 @@
                                     </div>
                                 </div>
                             </div>
-                            <li class="list-group-item project-item" href="#">
+                            <li class="list-group-item project-item" href="#" data-link="dashboards-description">
                                 <span class="badge">Jun14 - Jul15</span>
                                 <h4 class="list-group-item-heading">Business/Ops Performance Dashboards</h4>
                                 <p class="list-group-item-text"><i><small>- Elasticsearch, Kibana, Javascript, Java</small></i></p>
                                 <p class="list-group-item-text"><i><small>- At Khoslalabs & Novopay</small></i></p>
 
                             </li>
+                        <div class="project-description" id="dashboards-description">
+                                <div class="row">
+                                    <div class="col-md-8 me-desc" >
+                                        <p>Dashboards are an integral part of any operation that needs proactive realtime monitoring. During my stay at Novopay & Khosla Labs, I was responsible for the development of the analytics platform.</p>
+                                        <br/>
+                                        <h4>Dashboards</h4>
+                                        <p>My aim at Novopay was to build dashboards that called for an action. Building such an experience was an iterative process. The hard-work put in culminated to dashboards that helped the business to: </p>
+                                        <ul>
+                                            <li>React to failed transactions in real-time</li>
+                                            <li>View pending retailer applications by the minute and act on them</li>
+                                            <li>Monitor transaction/business growth with various metrics</li>
+                                            <li>View the activity of any sales-field-agent by the minute and optimize his/her workflow</li>
+                                            <li>Keep track of the technical infrastructure health</li>
+                                        </ul>
+                                        <p>These dashboards were built mostly on Kibana (along with a custom filtering proxy between Elasticsearch and Kibana to help with user role based filtering)</p>
+                                        <br/>
+                                        <h4>Analytics Platform</h4>
+                                        <p>As part of the platform, I contributed to building a framework to allow for asynchronous pushing of events from various services to Elasticsearch. ES was chosen for its high availability, scalability and integration with Kibana. Data was pushed to ES in a fault tolerant way by using an in memory database (DerbyDB) in the event pipeline. For integration with custom dashboards, I contributed towards building a REST API based on the elasticsearch Java API</p>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <h3>Tech Stack</h3>
+                                        <div class="col-md-12">
+                                            <p><strong>Dashboards: </strong> Kibana, Javascript, D3.js</p>
+                                            <p><strong>Backend:</strong> Java, Elasticsearch, Apache Derby, mysql</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <li class="list-group-item project-item" href="#">
                                 <span class="badge">Aug13 - Mar13</span>
                                 <h4 class="list-group-item-heading">Data Relay Server for Media Streaming on Mobile Devices</h4>
