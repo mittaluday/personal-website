@@ -217,6 +217,11 @@
             
             $(".project-item").click(function(){
                 var id = $(this).attr("data-link");
+                $(".project-item").each(function(){
+                    if(id != $(this).attr("data-link")){
+                        $("#" + $(this).attr("data-link")).slideUp(500);
+                    }
+                });
                 $("#" + id).css("display") == "block" ? $("#" + id).slideUp(500): $("#" + id).slideDown(500);
                 
             });
