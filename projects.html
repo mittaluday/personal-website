@@ -134,12 +134,34 @@
                                     </div>
                                 </div>
                             </div>
-                            <li class="list-group-item project-item" href="#">
+                            <li class="list-group-item project-item" href="#" data-link="relay-description">
                                 <span class="badge">Aug13 - Mar13</span>
                                 <h4 class="list-group-item-heading">Data Relay Server for Media Streaming on Mobile Devices</h4>
                                 <p class="list-group-item-text"><i><small>- Python, AWS, C, TCP</small></i></p>
                                 <p class="list-group-item-text"><i><small>- At Mobitrix</small></i></p>
                             </li>
+                            <div class="project-description" id="relay-description">
+                                <div class="row">
+                                    <div class="col-md-8 me-desc" >
+                                        <p>Mobitrix was a startup founded in 2012 in the BYOD space with the aim of delivering users’ desktop applications and content on their personal mobile devices.</p>
+                                        <br/>
+                                        <p>My main goal was to build scalable systems to support data streaming between multiple peers.</p>
+                                        <h4>Contributions: </h4>
+                                        <ul>
+                                            <li>Architected the communication model between the desktop streamer and the device from scratch</li>
+                                            <li>Implemented and integrated TCP hole punching to allow communication between peers located behind a NAT environment. Having a direct connection between peers helped reduce streaming load on our servers. But it was not always possible to achieve successful TCP hole punching.</li>
+                                            <li>Designed and implemented a data relay server to allow for cases where the routers did not allow TCP hole punching. The main challenges here were to write a custom load balancer on AWS and to modify the behaviour of the streamer from being a server to a client in real-time.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <h3>Tech Stack</h3>
+                                        <div class="col-md-12">
+                                            <p><strong>Server: </strong> Python, C, TCP</p>
+                                            <p><strong>Infra:</strong> AWS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </ul>
                     </div>
                 </div>
