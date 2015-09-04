@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400,700' rel='stylesheet' type='text/css'>
         <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/project-styles.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Roboto:400,300,500' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'>
@@ -36,13 +37,13 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row" id="nav-row">
                 <div class="col-md-12" role="navigation">
                     <nav>
                         <ul class="nav">
                             <a href="about.html"><li class="active">About</li></a>
-                            <a href="projects.html"><li>Projects</li></a>
-                            <a href="#"><li>Courses</li></a>
+                            <a href="#"><li>Projects</li></a>
+                            <a href="courses.html"><li>Courses</li></a>
                             <a href="files/CV_UdayMittal_Web.pdf" target="_blank"><li>Resume</li></a>                
                             <a href="index.html"><li>Cycling</li></a>
                         </ul>
@@ -53,75 +54,95 @@
         
         <div class="container pageBody">
             <main>
+                
+                
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3 me-desc">
-                        <p style="text-align:center">Areas that I am interested in and academic learnings</p>
+                    
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                        <ul class="nav nav-tabs nav-justified">
+                            <li role="presentation" class="active" id="graduate-courses-link"><a href="#"><h4>UCI (Graduate)</h4></a></li>
+                            <li role="presentation" id="undergraduate-courses-link"><a href="#"><h4>IIT Mandi (Undergraduate)</h4></a></li>
+                            <li role="presentation" id="online-courses-link"><a href="#"><h4>Online</h4></a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 panel panel-default">
-                        <div class="panel-heading">
-                            <div class="panel-title">
-                                <h4>UCI (Graduate)</h4>
-                            </div>
-                        </div>
-                        <div class="panel-body">
+                <div class="row" id="graduate-courses">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
 
-                            <ul>
-                                <li>Fundamentals of Analysis of Algorithms</li>
-                                <li>Machine Learning</li>
-                                <li>Visual Computing</li>
-                            </ul>
-                        </div>
+                    <ul class="list-group">
+                            <li class="list-group-item" href="#">Fundamentals of Analysis of Algorithms</li>
+                            <li class="list-group-item" href="#">Machine Learning</li>
+                            <li class="list-group-item" href="#">Visual Computing</li>
+                        </ul>
                     </div>
                 </div>
-                 
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 panel panel-default">
-                        <div class="panel-heading">
-                            <div class="panel-title">
-                                <h4>IIT Mandi (Undergraduate)</h4>
-                            </div>
-                        </div>
-                        <div class="panel-body">
-                            <ul>
-                                <li>Digital Image Processing</li>
-                                <li>Artificial Intelligence</li>
-                                <li>Operations Research</li>
-                                <li>Computer Networks</li>
-                                <li>SNMP & Network Management Systems</li>
-                                <li>Cryptography</li>
-                                <li>Computer Architecture</li>
-                                <li>Web based Information Systems</li>
+                <div class="row" id="undergraduate-courses" style="display:none">
+                      <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+
+                        <ul class="list-group" >
+                                <li class="list-group-item">Digital Image Processing</li>
+                                <li class="list-group-item">Artificial Intelligence</li>
+                                <li class="list-group-item">Operations Research</li>
+                                <li class="list-group-item">Computer Networks</li>
+                                <li class="list-group-item">SNMP & Network Management Systems</li>
+                                <li class="list-group-item">Cryptography</li>
+                                <li class="list-group-item">Computer Architecture</li>
+                                <li class="list-group-item">Web based Information Systems</li>
                             </ul>
                         </div>
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 panel panel-default">
-                        <div class="panel-heading">
-                            <div class="panel-title">
-                                <h4>Online</h4>
-                            </div>
+                <div class="row" id="online-courses" style="display:none" >
+                      <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+
+                        <ul class="list-group">
+                                <li class="list-group-item"><a href="https://www.udacity.com/course/data-visualization-and-d3js--ud507" target="_blank">Data Visualization & D3.js</a></li>
+                                <li class="list-group-item"><a href="https://www.udacity.com/course/object-oriented-javascript--ud015" target="_blank">Object Oriented Javascript</a></li>
+                            </ul>
                         </div>
-                        <div class="panel-body">
-                                <ul>
-                                    <li><a href="https://www.udacity.com/course/data-visualization-and-d3js--ud507" target="_blank">Data Visualization & D3.js</a></li>
-                                </ul>
-                        </div>
-                    </div>
                 </div>
             </main>
             <div class="row">
                     <div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 footer-bar">
                         
                     </div>
-            </div>    
+            </div>
         </div>
+        
         <div class="footer-container"></div>
         
         <script>
             $(".footer-container").load("footer.html"); 
+            $("#undergraduate-courses-link").click(function(){
+                $("#graduate-courses").css("display", "none");
+                $("#graduate-courses-link").attr("class", "");
+
+                $("#undergraduate-courses").css("display", "block");
+                $("#undergraduate-courses-link").attr("class", "active");
+                
+                $("#online-courses").css("display", "none");
+                $("#online-courses-link").attr("class", "");
+            });
+            $("#graduate-courses-link").click(function(){
+                $("#graduate-courses").css("display", "block");
+                $("#graduate-courses-link").attr("class", "active");
+
+                $("#undergraduate-courses").css("display", "none");
+                $("#undergraduate-courses-link").attr("class", "");
+                
+                $("#online-courses").css("display", "none");
+                $("#online-courses-link").attr("class", "");
+            });
+            $("#online-courses-link").click(function(){
+                $("#graduate-courses").css("display", "none");
+                $("#graduate-courses-link").attr("class", "");
+
+                $("#undergraduate-courses").css("display", "none");
+                $("#undergraduate-courses-link").attr("class", "");
+                
+                $("#online-courses").css("display", "block");
+                $("#online-courses-link").attr("class", "active");
+            });
+            
         </script>
     </body>
 </html>
