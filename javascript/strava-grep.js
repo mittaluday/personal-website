@@ -41,7 +41,7 @@ function drawSummary(data){
 
 //function called to draw the char after the data is received by the strava api
 function draw(data){
-    
+    console.log(data);
     var mediaHeight = $(window).height();
     console.log(mediaHeight);
     /*chart dimensions*/
@@ -66,6 +66,7 @@ function draw(data){
     /*Calculating axes extents*/
     var timeExtent = d3.extent(aggregatedData, function(d){return d.start_date});
     
+    //console.log(timeExtent);
     /*Defining required scales */
     //x scale
     var x = d3.time.scale();
@@ -90,7 +91,7 @@ function draw(data){
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom")
-        .ticks(d3.time.month, 3);
+        .ticks(d3.time.month, 1);
     
     //y axis
     var yAxis = d3.svg.axis()
@@ -132,7 +133,10 @@ function draw(data){
         .text("Average Speed in Kmph");
     
     //Todo: Hardcoding
-    var chartStartDate = new Date(2014, 9, 1);
+    console.log(aggregatedData);
+    var chartStartDate = new Date(aggregatedData[aggregatedData.length-1].start_date);
+    chartStartDate.setDate(1);
+    
     
     
     var updateChart = function(date){
@@ -189,15 +193,18 @@ function draw(data){
     var animate = function(){
         //calculating end date of the data
         //var dataFilterDate = d3.min(aggregatedData, function(d){return d.start_date;});
-        var dataFilterDate = new Date(2014,8,16);
+        var dataFilterDate = new Date(aggregatedData[aggregatedData.length-1].start_date);
+        dataFilterDate.setDate(1);
+    
         var dataEndDate = d3.max(aggregatedData, function(d){return d.start_date});
         var monthInterval = setInterval(function(){
 
             //traverse to the end of this month
-            dataFilterDate.setMonth(dataFilterDate.getMonth() + 3);
+            dataFilterDate.setMonth(dataFilterDate.getMonth() + 1);
             dataFilterDate.setDate(1);
+            console.log(dataFilterDate);
             updateChart(dataFilterDate);
-
+            
             //animation stop condition 
             if(dataFilterDate > dataEndDate) {
                 clearInterval(monthInterval);
