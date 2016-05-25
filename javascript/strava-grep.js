@@ -130,7 +130,7 @@ function draw(data){
         .attr("y", 6)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
-        .text("Average Speed in Kmph");
+        .text("Age");
     
     //Todo: Hardcoding
     console.log(aggregatedData);
