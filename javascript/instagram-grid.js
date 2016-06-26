@@ -33,7 +33,9 @@ var igrid = (function() {
       '_likesHover': config.likesHover !== undefined ? config.likesHover : false,
       '_caption': config.caption !== undefined ? config.caption : true,
       '_clearfix': config.clearfix !== undefined ? config.clearfix : false,
-      '_isMediaLarge': mq.matches
+      '_isMediaLarge': mq.matches,
+      '_username': config.username,
+      '_accesstoken': config.access_token
     };
     getInsta();
   }
@@ -83,7 +85,7 @@ var igrid = (function() {
   **
   */ 
   function getInsta() {
-    var url = params._local ? params._local : 'https://api.instagram.com/v1/users/'+params._userID+'/media/recent/?client_id='+params._clientid+'&count='+params.total;
+    var url = params._local ? params._local : 'https://api.instagram.com/v1/users/'+params._userID+'/media/recent/?access_token='+params._accesstoken+'&count='+params.total;
     var dataType = params._local ? "json" : "jsonp";
     $.ajax({
       type: "GET",
@@ -92,6 +94,7 @@ var igrid = (function() {
       url: url,
       success: initGrid,
       error: function(xhr, ajaxOptions, thrownError) {
+        console.log('error occured');
         console.log(xhr.status, thrownError);
       }
     });
@@ -131,6 +134,7 @@ var igrid = (function() {
     block.style.width = getImageWidth(params._isMediaLarge);
 
     // add image 
+    console.log(instagram);
     var image = document.createElement('img');
     image.src=instagram.data[i].images.low_resolution.url;
     image.id='image-'+i;
